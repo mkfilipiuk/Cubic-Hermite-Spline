@@ -16,8 +16,9 @@ for i = 1:20
   Es = [Es; new_E];
   Ns = [Ns ; N];
   N = N*2;
-  #plot(x,1./(x.^2+1),x,ppval(pp,x))
-  #pause(2)
+  plot(test_x,1./(test_x.^2+1),test_x,ppval(pp,test_x));
+  legend("a","b");
+  pause(1)
 endfor
 
 # As we see, r equals 4
