@@ -57,7 +57,7 @@ function pp = hspline(x,y,z)
   # 3*a*(xi_1 - xi)^2 + 2*b*(xi_1 - xi) + c = zi_1
   d = yi;
   c = zi;
-  a = (zi_1.*d1 + 2*d - 2*yi_1)./d3;
+  a = (zi_1.*d1 + 2*d - 2*yi_1 + c.*d1)./d3;
   b = (yi_1-d-c.*d1-a.*d3)./d2;
   
   # Creating cubic Hermite spline as piecewise polynomial
