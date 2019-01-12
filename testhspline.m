@@ -1,5 +1,14 @@
 # testhspline
 
+printf("Script testing hspline\n");
+printf("It performs aproximations for N^i nodes, where 1 <= i <= 20\n");
+printf("With each loop prints logarithm of the ratio of error for consecutive iterations  - r from the tast text.\n");
+printf("It also plots the current aproximation.\n");
+printf("At the end we have a loglog plot of error according to number of nodes.\n");
+
+
+
+
 N = 2;
 old_E = 0;
 Ns = [];
@@ -21,6 +30,6 @@ for i = 1:20
   pause(1)
 endfor
 
-# As we see, r equals 4
+printf("As we see, r equals 4, what is visible on a graph.\nWe can also see that at certain level, error becomes constant - it is related to inperfection of machine calculation precision\n");
 loglog(Ns,Es,Ns,1./(Ns.^4));
 legend("E_N","N^{-4}");
