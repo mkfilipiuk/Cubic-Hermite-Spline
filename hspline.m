@@ -33,7 +33,10 @@ function pp = hspline(x,y,z)
   # Checking if x is sorted and sorting if necessary
   if !issorted(x)
     warning("x is not sorted!");
-    x = sort(x);
+    s = sortrows([x,y,z]);
+    x = s(:,1);
+    y = s(:,2);
+    z = s(:,3);
   endif
   
   # Separating beginnings and endings of intervals
